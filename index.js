@@ -1,4 +1,4 @@
-const a = 'Возьмем, например'
+// Можно указать любой набор символов
 const alph = 'абвгодеёжзийклмнопрстуфхцчщъшьыэюя#%^&*@~'
 async function sendWord(word) {
   await fetch('http://localhost/messages/messages.php', {
@@ -10,7 +10,7 @@ async function sendWord(word) {
     mode: 'no-cors'
   })
 }
-
+// Точно не понял задание. Раз в написано, что нельзя использовать массив строк, то я подумал, что необходимо по одному слову отправлять в БД, а не целое сообщение
 async function sendData(data, alph) {
   let result = '';
   for (let i of data) {
